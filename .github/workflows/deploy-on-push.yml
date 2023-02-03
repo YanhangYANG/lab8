@@ -5,10 +5,10 @@ jobs:
   deploy-app:
     runs-on: ubuntu-latest
     steps:
-      -name: check out the code to build server
-       uses: actions/checkout@v3
-      -name: copy file to server
-       uses: appleboy/scp_action@master
+      name: check out the code to build server
+      uses: actions/checkout@v3
+      name: copy file to server
+      uses: appleboy/scp_action@master
        with: 
         host: ${{54.85.157.142}}
         username: ${{ubuntu}}
