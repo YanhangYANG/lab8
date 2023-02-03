@@ -9,15 +9,15 @@ jobs:
   deploy-app:
     runs-on: ubuntu-latest
     steps:
-      name: check out the code to build server
-      uses: actions/checkout@v3
-      name: copy file to server
-      uses: appleboy/scp_action@master
-      with: 
-        host: ${{54.85.157.142}}
-        username: ${{ubuntu}}
-        port: ${{22}}
-        key: ${{MIIEogIBAAKCAQEAgk370Fpuk5zRyUJCw+DsAgZIk/nzlLqvyrY6DDtHmesoyMXD
+      - name: check out the code to build server
+        uses: actions/checkout@v3
+      - name: copy file to server
+        uses: appleboy/scp_action@master
+        with: 
+         host: ${{54.85.157.142}}
+         username: ${{ubuntu}}
+         port: ${{22}}
+         key: ${{MIIEogIBAAKCAQEAgk370Fpuk5zRyUJCw+DsAgZIk/nzlLqvyrY6DDtHmesoyMXD
                 9YXE1ROzIm4B2yaNtL8CTVjS4MJIOzylCO4l8Ba4OEyJXb2u13cc+qDr3Nx9e/qc
                 FNYexBvZTP8Pg0GsKMCyycl3oNR9ez/mG4v31lT9t0mWLNKPasU07GsEmZ1O4fJf
                 EhcM4yriAB0Fy6kLheOmjuXIFGVzmCgn3QDc4saZhei8qPJHUKuGOxRSPQonrKHm
@@ -42,6 +42,6 @@ jobs:
                 b/cZAoGAOJWV5JnQwCoT1qhY+Yw+xWuMKlK+3YfKkRrno/XBW1wZ+mgVOiVYoghk
                 Y6cdDu9xpBtPLR486Mvsk5KtqRKJTLuNAnW6nFwh3ITwVLLuEo5uX4hKsvXe89c7
                 nPp2bIZFULDtrRdvSB7PHt6QRbyVwjMFfQxKdXIs7HuIk90a4Rs=}}
-        source: "./html/*"
-        target: "/var/www/html"
-        strip_components: 1
+         source: "./html/*"
+         target: "/var/www/html"
+         strip_components: 1
